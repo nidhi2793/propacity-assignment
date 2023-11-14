@@ -1,15 +1,17 @@
 import { useEffect, useState } from "react";
-import { CATEGORIES_MAPPINGS, DATA_URL } from "../../constant";
+import { CATEGORIES_CONFIGS, DATA_URL } from "../../constant";
 import { GridContainer } from "./GridContainer";
+import { ListContainer } from "./ListContainer";
 
 export const MainContent = ({ category }) => {
   const [categoryData, setCateoryData] = useState([]);
   const [viewType, setViewType] = useState(
-    CATEGORIES_MAPPINGS[category]?.defaultListView
+    CATEGORIES_CONFIGS[category]?.defaultListView
   );
   const [isLoading, setIsloading] = useState(true);
 
   useEffect(() => {
+    setViewType(CATEGORIES_CONFIGS[category]?.defaultListView);
     async function fetchCategoryData(category) {
       setIsloading(true);
       const data = [];
@@ -79,13 +81,29 @@ export const MainContent = ({ category }) => {
             }}
           >
             <span className="capitalize-first-letter">{category}</span>
-            <span>Selector</span>
+            <span>
+              <span
+                onClick={() => setViewType("grid")}
+                style={{ cursor: "pointer" }}
+              >
+                Grid
+              </span>{" "}
+              |{" "}
+              <span
+                onClick={() => setViewType("list")}
+                style={{ cursor: "pointer" }}
+              >
+                List
+              </span>
+            </span>
           </div>
           <div>
             {isLoading ? (
               <span>Loading...</span>
-            ) : (
+            ) : viewType === "grid" ? (
               <GridContainer data={categoryData} category={category} />
+            ) : (
+              <ListContainer data={categoryData} category={category} />
             )}
           </div>
         </div>

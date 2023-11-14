@@ -136,3 +136,8 @@ body {
     justify-content: space-between;
     height: 56px;
 }
+
+.list-cell {
+    height: 40px;
+    padding: 0px 16px;
+}

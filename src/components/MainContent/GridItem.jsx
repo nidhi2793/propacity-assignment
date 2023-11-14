@@ -1,4 +1,4 @@
-import { CATEGORIES_MAPPINGS } from "../../constant";
+import { CATEGORIES_CONFIGS } from "../../constant";
 
 export const GridItem = ({ imageUrl, name, category }) => {
   return (
@@ -9,7 +9,7 @@ export const GridItem = ({ imageUrl, name, category }) => {
       <div className="grid-item-title-container">
         <span style={{ display: "flex", alignItems: "center" }}>
           <img
-            src={`/icons/${CATEGORIES_MAPPINGS[category]?.gridTitleIcon}`}
+            src={`/icons/${CATEGORIES_CONFIGS[category]?.gridTitleIcon}`}
             alt=""
             style={{ marginRight: 12 }}
           />
