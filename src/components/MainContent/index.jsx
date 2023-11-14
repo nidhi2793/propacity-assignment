@@ -2,20 +2,6 @@ import { useEffect, useState } from "react";
 import { CATEGORIES_MAPPINGS, DATA_URL } from "../../constant";
 import { GridContainer } from "./GridContainer";
 
-const fetchCategoryData = async (category) => {
-  const data = [];
-  try {
-    const url = `${DATA_URL}${category}/`;
-    const response = await fetch(url);
-    const { results } = (await response.json()) || {};
-    data.push(...results);
-  } catch (err) {
-    console.log("Error: ", err);
-  }
-  console.log("Data: ", data);
-  return data;
-};
-
 export const MainContent = ({ category }) => {
   const [categoryData, setCateoryData] = useState([]);
   const [viewType, setViewType] = useState(
@@ -24,15 +10,29 @@ export const MainContent = ({ category }) => {
   const [isLoading, setIsloading] = useState(true);
 
   useEffect(() => {
-    setIsloading(true);
-    if (category) {
-      (async () => {
-        const data = await fetchCategoryData(category);
-        setCateoryData(data);
-      })();
+    async function fetchCategoryData(category) {
+      setIsloading(true);
+      const data = [];
+      try {
+        const url = `${DATA_URL}${category}/`;
+        const response = await fetch(url);
+        const { results } = (await response.json()) || {};
+        data.push(...results);
+      } catch (err) {
+        console.log("Error: ", err);
+      }
+      setCateoryData(data);
+      setIsloading(false);
     }
-    setIsloading(false);
+    if (category) {
+      fetchCategoryData(category);
+    } else {
+      setIsloading(false);
+    }
   }, [category]);
+
+  console.log("isLoading: ", isLoading);
+  console.log("Data: ", categoryData);
 
   return (
     <div
@@ -41,9 +41,7 @@ export const MainContent = ({ category }) => {
         flex: 1,
       }}
     >
-      {isLoading ? (
-        <span>Loading...</span>
-      ) : !category ? (
+      {!category ? (
         <div
           style={{
             display: "flex",
@@ -84,7 +82,11 @@ export const MainContent = ({ category }) => {
             <span>Selector</span>
           </div>
           <div>
-            <GridContainer data={categoryData} category={category} />
+            {isLoading ? (
+              <span>Loading...</span>
+            ) : (
+              <GridContainer data={categoryData} category={category} />
+            )}
           </div>
         </div>
       )}

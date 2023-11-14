@@ -14,23 +14,23 @@ export const CATEGORIES_MAPPINGS = {
   },
   [CATEGORIES.PEOPLE]: {
     defaultListView: "list",
-    gridTitleIcon: "",
+    gridTitleIcon: "People.svg",
   },
   [CATEGORIES.PLANETS]: {
     defaultListView: "list",
-    gridTitleIcon: "",
+    gridTitleIcon: "Planet.svg",
   },
   [CATEGORIES.SPECIES]: {
     defaultListView: "list",
-    gridTitleIcon: "",
+    gridTitleIcon: "Species.svg",
   },
   [CATEGORIES.STARSHIPS]: {
     defaultListView: "list",
-    gridTitleIcon: "",
+    gridTitleIcon: "Starships.svg",
   },
   [CATEGORIES.VEHICLES]: {
     defaultListView: "list",
-    gridTitleIcon: "",
+    gridTitleIcon: "Vehicles.svg",
   },
 };
 
