@@ -29,6 +29,7 @@ export const GridContainer = ({ data, category, onItemClick = () => {} }) => {
             name={parsedData.name || "Name Missing"}
             category={category}
             onClick={() => onItemClick(data[index])}
+            data={data[index]}
           />
         ))
       ) : (

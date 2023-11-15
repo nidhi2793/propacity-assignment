@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
 import { CATEGORIES_CONFIGS } from "../../constant";
 
 export const ListContainer = ({ data, category, onItemClick = () => {} }) => {
