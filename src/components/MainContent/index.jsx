@@ -34,9 +34,6 @@ export const MainContent = ({ category, onResourceClick }) => {
     }
   }, [category]);
 
-  console.log("isLoading: ", isLoading);
-  console.log("Data: ", categoryData);
-
   return (
     <div
       style={{

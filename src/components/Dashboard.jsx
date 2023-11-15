@@ -18,7 +18,6 @@ export const Dashboard = () => {
   const [sideBarData, setSideBarData] = useState(null);
 
   const handleOnResourceClick = (data) => {
-    console.log("handleOnResourceClick: ", data);
     if (data) {
       setSideBarData(data);
       setShowSideBar(true);

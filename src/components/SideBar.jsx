@@ -7,7 +7,6 @@ export const SideBar = ({
   show = false,
   onClose = () => {},
 }) => {
-  console.log("show: ", show);
   const [isVisible, setIsVisible] = useState(show);
   const sideBarConfig = useMemo(
     () => CATEGORIES_CONFIGS[category]?.sideBarConfig,
@@ -20,8 +19,6 @@ export const SideBar = ({
   };
 
   useEffect(() => setIsVisible(show), [show]);
-
-  console.log("isVisible: ", isVisible);
 
   return isVisible ? (
     <div style={{ width: 400 }}>
@@ -51,7 +48,7 @@ export const SideBar = ({
       >
         {resourceData ? (
           sideBarConfig.items.map((item) => (
-            <div>
+            <div key={item.name}>
               <div style={{ marginBottom: 8 }}>{item.name}</div>
               <div>
                 {item.type === "img" ? (

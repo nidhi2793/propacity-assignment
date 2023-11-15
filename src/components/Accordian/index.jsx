@@ -13,6 +13,7 @@ export const Accordian = ({ category: selectedCategory }) => {
             className={`accordian-item accordian-item-primary font-primary ${
               isSelected ? "accordian-item-highlighted" : ""
             }`}
+            key={category}
           >
             <span style={{ width: "100%", display: "flex" }}>
               <img

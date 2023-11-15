@@ -9,7 +9,6 @@ export const DropDown = ({ data, dropDownIconStyles = {} }) => {
   };
 
   const handleOnBlur = () => {
-    console.log("Running onBlur");
     setIsVisible(false);
   };
 
@@ -42,7 +41,7 @@ export const DropDown = ({ data, dropDownIconStyles = {} }) => {
       {isVisible ? (
         <div className="dropdown dropdown-text">
           {dropDownOptions.map(({ name, iconPath = "", customStyle = {} }) => (
-            <div style={customStyle} className="dropdown-items">
+            <div style={customStyle} className="dropdown-items" key={name}>
               <img
                 src={iconPath}
                 style={{ marginRight: 8 }}

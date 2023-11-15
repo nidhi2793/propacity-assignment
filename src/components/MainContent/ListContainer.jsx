@@ -35,6 +35,7 @@ export const ListContainer = ({ data, category, onItemClick = () => {} }) => {
               <th
                 style={{ textAlign: "left", backgroundColor: "#4D5875" }}
                 className="list-cell"
+                key={item}
               >
                 {item}
               </th>
@@ -42,13 +43,14 @@ export const ListContainer = ({ data, category, onItemClick = () => {} }) => {
           </tr>
         </thead>
         <tbody>
-          {rows.map(({ cells, rowData }) => (
+          {rows.map(({ cells, rowData }, index) => (
             <tr
               onClick={() => onItemClick(rowData)}
               style={{ cursor: "pointer" }}
+              key={index}
             >
-              {cells.map((cell) => (
-                <td className="list-cell" style={{ height: 54 }}>
+              {cells.map((cell, index) => (
+                <td className="list-cell" style={{ height: 54 }} key={index}>
                   {cell}
                 </td>
               ))}

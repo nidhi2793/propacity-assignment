@@ -30,6 +30,7 @@ export const GridContainer = ({ data, category, onItemClick = () => {} }) => {
             category={category}
             onClick={() => onItemClick(data[index])}
             data={data[index]}
+            key={index}
           />
         ))
       ) : (
