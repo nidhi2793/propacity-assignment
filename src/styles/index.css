@@ -121,6 +121,10 @@ body {
     align-self: stretch;
 }
 
+.grid-item:hover {
+    scale: 1.01;
+}
+
 .grid-item-title-container {
     padding: 12px 12px 12px 16px;
     margin-top: 4px;
@@ -135,6 +139,10 @@ body {
 .list-cell {
     height: 40px;
     padding: 0px 16px;
+}
+
+.list-row:hover {
+    background-color: rgb(77 88 117 / 21%);
 }
 
 .sidebar-item-values {
@@ -190,6 +198,12 @@ body {
     align-items: center;
     justify-content: flex-start;
     padding: 4px 8px;
+    width: 100%;
+}
+
+.dropdown-items:hover {
+    background-color: #eee;
+    border-radius: 4px;
 }
 
 .loader-container {

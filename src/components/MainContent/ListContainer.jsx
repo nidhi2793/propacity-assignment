@@ -47,6 +47,7 @@ export const ListContainer = ({ data, category, onItemClick = () => {} }) => {
             <tr
               onClick={() => onItemClick(rowData)}
               style={{ cursor: "pointer" }}
+              className="list-row"
               key={index}
             >
               {cells.map((cell, index) => (

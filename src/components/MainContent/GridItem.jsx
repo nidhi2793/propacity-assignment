@@ -9,7 +9,11 @@ export const GridItem = ({
   onClick = () => {},
 }) => {
   return (
-    <div style={{ width: 354, cursor: "pointer" }} onClick={onClick}>
+    <div
+      style={{ width: 354, cursor: "pointer" }}
+      onClick={onClick}
+      className="grid-item"
+    >
       <div style={{ height: 160, overflow: "hidden", borderRadius: 8 }}>
         <img src={imageUrl} alt={name} />
       </div>
