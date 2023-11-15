@@ -1,3 +1,5 @@
+import { DropDown } from "./components/DropDown";
+
 export const CATEGORIES = {
   FILMS: "films",
   PEOPLE: "people",
@@ -5,6 +7,12 @@ export const CATEGORIES = {
   SPECIES: "species",
   STARSHIPS: "starships",
   VEHICLES: "vehicles",
+};
+
+const optionsCell = {
+  name: "",
+  key: "",
+  formatter: (...args) => <DropDown {...args} />,
 };
 
 export const CATEGORIES_CONFIGS = {
@@ -15,6 +23,7 @@ export const CATEGORIES_CONFIGS = {
       { name: "Name", key: "title" },
       { name: "Director", key: "director" },
       { name: "Release Date", key: "release_date" },
+      optionsCell,
     ],
     sideBarConfig: {
       items: [
@@ -42,6 +51,7 @@ export const CATEGORIES_CONFIGS = {
       { name: "Name", key: "name" },
       { name: "Birth Date", key: "birth_year" },
       { name: "Species", key: "species" },
+      optionsCell,
     ],
     sideBarConfig: {
       items: [
@@ -69,6 +79,7 @@ export const CATEGORIES_CONFIGS = {
       { name: "Name", key: "name" },
       { name: "Climate", key: "climate" },
       { name: "Gravity", key: "gravity" },
+      optionsCell,
     ],
     sideBarConfig: {
       items: [
@@ -92,6 +103,7 @@ export const CATEGORIES_CONFIGS = {
       { name: "Name", key: "name" },
       { name: "Home World", key: "homeworld" },
       { name: "Life Span", key: "average_lifespan" },
+      optionsCell,
     ],
     sideBarConfig: {
       items: [
@@ -123,6 +135,7 @@ export const CATEGORIES_CONFIGS = {
       { name: "Name", key: "name" },
       { name: "Model", key: "model" },
       { name: "HyperDrive Rating", key: "hyperdrive_rating" },
+      optionsCell,
     ],
     sideBarConfig: {
       items: [
@@ -150,6 +163,7 @@ export const CATEGORIES_CONFIGS = {
       { name: "Name", key: "name" },
       { name: "Model", key: "model" },
       { name: "Top Speed", key: "max_atmosphering_speed" },
+      optionsCell,
     ],
     sideBarConfig: {
       items: [
