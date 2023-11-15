@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { CATEGORIES_CONFIGS, DATA_URL } from "../../constant";
 import { GridContainer } from "./GridContainer";
 import { ListContainer } from "./ListContainer";
+import { ListViewSwitch } from "../ListViewSwitch";
 
 export const MainContent = ({ category, onResourceClick }) => {
   const [categoryData, setCateoryData] = useState([]);
@@ -82,19 +83,12 @@ export const MainContent = ({ category, onResourceClick }) => {
           >
             <span className="capitalize-first-letter">{category}</span>
             <span>
-              <span
-                onClick={() => setViewType("grid")}
-                style={{ cursor: "pointer" }}
-              >
-                Grid
-              </span>{" "}
-              |{" "}
-              <span
-                onClick={() => setViewType("list")}
-                style={{ cursor: "pointer" }}
-              >
-                List
-              </span>
+              <ListViewSwitch
+                onSwitch={(view) => {
+                  setViewType(view);
+                }}
+                defaultView={viewType}
+              />
             </span>
           </div>
           <div>
