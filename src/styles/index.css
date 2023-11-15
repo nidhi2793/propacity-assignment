@@ -141,3 +141,31 @@ body {
     height: 40px;
     padding: 0px 16px;
 }
+
+.sidebar-item-values {
+    display: flex;
+    padding: 10px 16px;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid  #f1f1f5;
+    background: #fafafb;
+    color: var(--Text-Black, #252C32);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+}
+
+.sidebar-close-btn {
+    padding: 10px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    border-radius: 8px;
+    background: #CB1A80;
+    cursor: pointer;
+}

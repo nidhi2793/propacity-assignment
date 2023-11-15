@@ -3,7 +3,7 @@ import { CATEGORIES_CONFIGS, DATA_URL } from "../../constant";
 import { GridContainer } from "./GridContainer";
 import { ListContainer } from "./ListContainer";
 
-export const MainContent = ({ category }) => {
+export const MainContent = ({ category, onResourceClick }) => {
   const [categoryData, setCateoryData] = useState([]);
   const [viewType, setViewType] = useState(
     CATEGORIES_CONFIGS[category]?.defaultListView
@@ -101,9 +101,17 @@ export const MainContent = ({ category }) => {
             {isLoading ? (
               <span>Loading...</span>
             ) : viewType === "grid" ? (
-              <GridContainer data={categoryData} category={category} />
+              <GridContainer
+                data={categoryData}
+                category={category}
+                onItemClick={onResourceClick}
+              />
             ) : (
-              <ListContainer data={categoryData} category={category} />
+              <ListContainer
+                data={categoryData}
+                category={category}
+                onItemClick={onResourceClick}
+              />
             )}
           </div>
         </div>

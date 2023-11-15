@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { CATEGORIES_CONFIGS } from "../../constant";
 
-export const ListContainer = ({ data, category }) => {
+export const ListContainer = ({ data, category, onItemClick = () => {} }) => {
   const [headerItems, setHeaderItems] = useState([]);
   const [rowKeys, setRowKeys] = useState([]);
 
@@ -36,7 +36,7 @@ export const ListContainer = ({ data, category }) => {
         </thead>
         <tbody>
           {data.map((item) => (
-            <tr>
+            <tr onClick={() => onItemClick(item)}>
               {rowKeys.map((key) => {
                 return key === "options" ? (
                   <span>DropDown</span>

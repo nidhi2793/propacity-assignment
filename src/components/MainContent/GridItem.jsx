@@ -1,8 +1,8 @@
 import { CATEGORIES_CONFIGS } from "../../constant";
 
-export const GridItem = ({ imageUrl, name, category }) => {
+export const GridItem = ({ imageUrl, name, category, onClick = () => {} }) => {
   return (
-    <div style={{ width: 354 }}>
+    <div style={{ width: 354 }} onClick={onClick}>
       <div style={{ height: 160, overflow: "hidden", borderRadius: 8 }}>
         <img src={imageUrl} alt={name} />
       </div>

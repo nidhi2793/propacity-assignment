@@ -19,15 +19,16 @@ const dataParser = (data, category) => {
   return parsedData;
 };
 
-export const GridContainer = ({ data, category }) => {
+export const GridContainer = ({ data, category, onItemClick = () => {} }) => {
   return (
     <div className="grid-container">
       {data && data.length ? (
-        dataParser(data, category).map((parsedData) => (
+        dataParser(data, category).map((parsedData, index) => (
           <GridItem
             imageUrl={parsedData.imageUrl || "https://picsum.photos/354/160"}
             name={parsedData.name || "Name Missing"}
             category={category}
+            onClick={() => onItemClick(data[index])}
           />
         ))
       ) : (
