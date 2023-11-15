@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { SearchBar } from "./SearchBar";
 
 export const Header = (showSearch) => {
   return (
@@ -10,7 +11,7 @@ export const Header = (showSearch) => {
           className="starwarslogo"
         />
       </Link>
-      {showSearch && <div>Search</div>}
+      {showSearch && <SearchBar />}
     </div>
   );
 };

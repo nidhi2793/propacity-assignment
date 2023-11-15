@@ -198,3 +198,14 @@ body {
     justify-content: center;
     margin: 20px;
 }
+
+.search-input {
+    background: none;
+    border: none;
+    color: #fff;
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: #fff;
+}
