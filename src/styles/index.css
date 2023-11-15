@@ -87,7 +87,6 @@ body {
 
 .welcome-to-star-wars {
     color: #3B3F5C;
-    font-family: "Open Sans";
     font-size: 22px;
     font-style: normal;
     font-weight: 700;
@@ -99,7 +98,6 @@ body {
 
 .welcome-to-star-wars-description {
     color: #3B3F5C;
-    font-family: "Open Sans";
     font-size: 14px;
     font-style: normal;
     font-weight: 400;

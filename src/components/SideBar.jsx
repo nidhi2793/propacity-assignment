@@ -86,7 +86,12 @@ export const SideBar = ({
           </div>
         )}
       </div>
-      <div style={{ padding: "20px 10px 10px 24px" }}>
+      <div
+        style={{
+          padding: "20px 10px 24px 10px",
+          borderBottom: "1px solid #fff",
+        }}
+      >
         <div className="sidebar-close-btn" onClick={handleOnClose}>
           Close
         </div>
