@@ -21,7 +21,7 @@ export const SideBar = ({
   useEffect(() => setIsVisible(show), [show]);
 
   return isVisible ? (
-    <div style={{ width: 400 }}>
+    <div style={{ width: 400, border: "1px solid #fff" }}>
       {/* Header */}
       <div
         style={{
@@ -31,7 +31,7 @@ export const SideBar = ({
         }}
       >
         <span>{sideBarConfig.headerName}</span>
-        <span onClick={handleOnClose}>
+        <span onClick={handleOnClose} style={{ cursor: "pointer" }}>
           <img src="/icons/Close.svg" width={24} height={24} alt="close" />
         </span>
       </div>

@@ -7,7 +7,7 @@ body {
 }
 
 .header {
-    height: 56px;
+    height: 76px;
     display: flex;
     padding: 20px;
     justify-content: space-between;
@@ -16,7 +16,6 @@ body {
 
 .font-primary {
     color: #fff;
-    font-feature-settings: 'clig' off, 'liga' off;
     font-family: "Inter";
     font-size: 14px;
     font-style: normal;
@@ -61,10 +60,6 @@ body {
 
 .accordian-item-highlighted {
     background-color: #CB1A80;
-}
-
-.main-content {
-
 }
 
 .main-content-default-view {
@@ -150,8 +145,6 @@ body {
     border: 1px solid  #f1f1f5;
     background: #fafafb;
     color: var(--Text-Black, #252C32);
-    font-feature-settings: 'clig' off, 'liga' off;
-    font-family: Poppins;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
