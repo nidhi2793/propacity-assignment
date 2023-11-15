@@ -36,7 +36,7 @@ export const ListContainer = ({ data, category, onItemClick = () => {} }) => {
         </thead>
         <tbody>
           {data.map((item) => (
-            <tr onClick={() => onItemClick(item)}>
+            <tr onClick={() => onItemClick(item)} style={{ cursor: "pointer" }}>
               {rowKeys.map((key) => {
                 return key === "options" ? (
                   <span>DropDown</span>
