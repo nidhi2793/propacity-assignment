@@ -54,11 +54,19 @@ body {
     padding: 8px 12px;
 }
 
+.accordian-item-primary:hover {
+    background-color: rgba(249, 250, 253, 0.30);
+}
+
 .accordian-item-secondary {
     padding: 8px 12px 8px 28px;
 }
 
 .accordian-item-highlighted {
+    background-color: #CB1A80;
+}
+
+.accordian-item-highlighted:hover {
     background-color: #CB1A80;
 }
 
@@ -182,6 +190,7 @@ body {
     border: 1px solid #f1f1f5;
     background: #fff;
     position: absolute;
+    z-index: 2;
 }
 
 .dropdown-text {
