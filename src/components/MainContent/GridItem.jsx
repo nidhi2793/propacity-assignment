@@ -22,7 +22,17 @@ export const GridItem = ({
           />
           {name}
         </span>
-        <DropDown data={data} />
+        <DropDown
+          data={data}
+          dropDownIconStyles={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "rgba(249, 250, 253, 0.20)",
+            borderRadius: 6,
+            padding: 4,
+          }}
+        />
       </div>
     </div>
   );

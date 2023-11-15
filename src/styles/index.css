@@ -198,3 +198,10 @@ body {
     justify-content: flex-start;
     padding: 4px 8px;
 }
+
+.loader-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}

@@ -99,7 +99,16 @@ export const MainContent = ({ category, onResourceClick }) => {
           </div>
           <div>
             {isLoading ? (
-              <span>Loading...</span>
+              <div className="loader-container">
+                Loading{" "}
+                <img
+                  src="/icons/Loader.svg"
+                  alt="loading..."
+                  width={24}
+                  height={24}
+                  style={{ marginLeft: 8 }}
+                />
+              </div>
             ) : viewType === "grid" ? (
               <GridContainer
                 data={categoryData}
