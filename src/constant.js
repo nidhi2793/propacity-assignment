@@ -12,7 +12,7 @@ export const CATEGORIES = {
 const optionsCell = {
   name: "",
   key: "",
-  formatter: (...args) => <DropDown {...args} />,
+  formatter: (...args) => <DropDown {...args} position="left" />,
 };
 
 export const CATEGORIES_CONFIGS = {

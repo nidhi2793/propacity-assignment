@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const DropDown = ({ data, dropDownIconStyles = {} }) => {
+export const DropDown = ({ dropDownIconStyles = {}, position = "list" }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleOn3DotsClick = (e) => {
@@ -39,7 +39,10 @@ export const DropDown = ({ data, dropDownIconStyles = {} }) => {
         <img src="/icons/ThreeDots.svg" width={24} height={24} alt="Options" />
       </div>
       {isVisible ? (
-        <div className="dropdown dropdown-text">
+        <div
+          className="dropdown dropdown-text"
+          style={position === "left" ? { translate: "-152px 0px" } : {}}
+        >
           {dropDownOptions.map(({ name, iconPath = "", customStyle = {} }) => (
             <div style={customStyle} className="dropdown-items" key={name}>
               <img
