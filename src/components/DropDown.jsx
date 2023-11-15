@@ -26,8 +26,6 @@ export const DropDown = ({ dropDownIconStyles = {}, position = "list" }) => {
     },
   ];
 
-  // TODO: Check if free space is available on right side, if not open in left side.
-
   return (
     <div>
       <div
